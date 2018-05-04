@@ -12,5 +12,3 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/event-send', 'HomeController@test');
-Route::get('test-route', 'HomeController@testRoute');
