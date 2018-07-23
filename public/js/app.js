@@ -11163,7 +11163,7 @@ __webpack_require__(11);
 
 __webpack_require__(35); //todo move to package
 __webpack_require__(37); //todo move to package
-// require('./aos');   //todo move to package
+// require('./aos');   //todo enable and move to package
 
 __webpack_require__(38);
 

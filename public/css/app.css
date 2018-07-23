@@ -419,7 +419,7 @@ body {
   min-height: 100%;
   margin: 0;
   font-family: "LatoRegular";
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: #26272d;
   background-color: #ffffff;
@@ -538,7 +538,7 @@ select:-webkit-autofill:focus {
   display: block;
   padding: 5px 10px;
   font-family: "LatoBold";
-  font-size: 16px;
+  font-size: 18px;
   color: #26272d;
   -webkit-transition: opacity .3s ease-in-out, color .3s ease-in-out;
   transition: opacity .3s ease-in-out, color .3s ease-in-out;
@@ -904,6 +904,10 @@ select:-webkit-autofill:focus {
 
 .btn--sm {
   padding: 8px 24px;
+}
+
+.want-button {
+  font-size: 20px;
 }
 
 @media (max-width: 320px) {

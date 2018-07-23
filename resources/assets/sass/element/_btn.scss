@@ -1,20 +1,20 @@
 .btn {
-	position:relative;
-	z-index: 2;
-	border: none;
-	border-radius: 21px;
-	outline: none;
-	overflow:hidden;
+  position: relative;
+  z-index: 2;
+  border: none;
+  border-radius: 21px;
+  outline: none;
+  overflow: hidden;
   cursor: pointer;
 }
 
 .btn-border--gray {
-	color: $dark-gray;
-	border: 1px solid rgba($color: $dark-gray, $alpha: .1);
-	transition: all 1s ease-out;
+  color: $dark-gray;
+  border: 1px solid rgba($color: $dark-gray, $alpha: .1);
+  transition: all 1s ease-out;
 
-	 &::before,
-	 &::after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     display: block;
@@ -24,39 +24,39 @@
     border-radius: 21px;
     z-index: -1;
     transform: scale(1);
-    transition:.5s;
+    transition: .5s;
   }
-  
+
   &::before {
-    top:30px;
-    left:0;
-    transform:translateX(-100%);
+    top: 30px;
+    left: 0;
+    transform: translateX(-100%);
   }
-  
+
   &::after {
-    top:30px;
-    right:0;
-    transform:translateX(100%); 
+    top: 30px;
+    right: 0;
+    transform: translateX(100%);
   }
-  
-  &:hover {     
-	  color: #fff;     
-    &::before { 
-      transform: translateX(530%) scale(10);   
+
+  &:hover {
+    color: #fff;
+    &::before {
+      transform: translateX(530%) scale(10);
     }
-    &::after { 
-      transform: translateX(-530%) scale(10); 
+    &::after {
+      transform: translateX(-530%) scale(10);
     }
   }
 }
 
 .btn-border--green {
-	color: $green;
-	border: 1px solid $green;
-	transition: all 1s ease-out;
+  color: $green;
+  border: 1px solid $green;
+  transition: all 1s ease-out;
 
-	 &::before,
-	 &::after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -66,42 +66,42 @@
     background: $green;
     border-radius: 25px;
     transform: scale(1);
-    transition:.5s;
+    transition: .5s;
   }
-  
-  &::before {
-    top:30px;
-    left:0;
-    transform:translateX(-100%);
-  }
-  
-  &::after {
-    top:30px;
-    right:0;
-    transform:translateX(100%); 
-  }
-  
-  &:hover {     
-	  color: #fff;
 
-    &::before { 
-      transform: translateX(530%) scale(10);   
+  &::before {
+    top: 30px;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &::after {
+    top: 30px;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      transform: translateX(530%) scale(10);
     }
 
-    &::after { 
-      transform: translateX(-530%) scale(10); 
+    &::after {
+      transform: translateX(-530%) scale(10);
     }
   }
 }
 
 .btn--green {
-	color: #fff;
-	background-color: $green;
-	border: 1px solid $green;
-	transition: all 1s ease-out;
+  color: #fff;
+  background-color: $green;
+  border: 1px solid $green;
+  transition: all 1s ease-out;
 
-	 &::before,
-	 &::after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -111,61 +111,65 @@
     background: #fff;
     border-radius: 25px;
     transform: scale(1);
-    transition:.5s;
+    transition: .5s;
   }
-  
-  &::before {
-    top:30px;
-    left:0;
-    transform:translateX(-100%);
-  }
-  
-  &::after {
-    top:30px;
-    right:0;
-    transform:translateX(100%); 
-  }
-  
-  &:hover {     
-	  color: $green;
 
-    &::before { 
-      transform: translateX(530%) scale(10);   
+  &::before {
+    top: 30px;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &::after {
+    top: 30px;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &:hover {
+    color: $green;
+
+    &::before {
+      transform: translateX(530%) scale(10);
     }
 
-    &::after { 
-      transform: translateX(-530%) scale(10); 
+    &::after {
+      transform: translateX(-530%) scale(10);
     }
   }
 }
 
 .btn--lg {
-	padding: 11px 40px;
+  padding: 11px 40px;
 }
 
 .btn--sm {
-	padding: 8px 24px;
+  padding: 8px 24px;
+}
+
+.want-button {
+  font-size: 20px;
 }
 
 @media (max-width: 320px) {
   .btn-border--gray {
     &::before,
     &::after {
-      width: 30px;  
+      width: 30px;
     }
   }
-  
+
   .btn-border--green {
     &::before,
     &::after {
-      width: 30px;  
+      width: 30px;
     }
   }
 
   .btn--green {
     &::before,
     &::after {
-      width: 30px;  
+      width: 30px;
     }
   }
 }

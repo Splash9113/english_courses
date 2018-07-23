@@ -56,7 +56,7 @@
             <div class="banner__content">
                 <h1 class="banner__title" data-aos="zoom-in">Учи английский с Юлей!</h1>
                 <p class="banner__text" data-aos="slide-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis sapien quis sollicitudin finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce vehicula est ut orci euismod</p>
-                <a href="#" class="btn btn-border--gray btn--lg popup__toggle banner__link" data-aos="zoom-in" data-aos-delay="500">Хочу учить язык</a>
+                <a href="#" class="btn btn-border--gray btn--lg popup__toggle banner__link want-button" data-aos="zoom-in" data-aos-delay="500">Хочу учить язык</a>
             </div>
         </div>
     </div>
@@ -212,7 +212,6 @@
                 <div class="timetable__left" data-aos="slide-right">
                     <h2 class="timetable__title">Выбери для себя удобное время</h2>
                     <div class="timetable__switcher">
-                        <span class="timetable__switcher-caption">Расписание</span>
                         <div class="timetable__switcher-container">
                             <input type="radio" id="weekdays" class="timetable__switcher-input" name="time" value="weekdays" checked>
                             <label for="weekdays" class="timetable__switcher-label">Будние дни</label>
@@ -222,7 +221,6 @@
                         </div>
                     </div>
                     <p class="timetable__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis sapien quis sollicitudin finibus.</p>
-                    <span class="timetable__questions">Остались вопросы? <a href="#" class="timetable__questions-link">Свяжись со мной</a></span>
                 </div>
                 <div class="timetable__right" data-aos="slide-left">
                     <div class="timetable__table timetable__table--current">
