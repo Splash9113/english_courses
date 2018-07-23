@@ -379,7 +379,7 @@
                             <div class="contacts__form-row">
                                 <div class="contacts__form-col">
                                     <div class="contacts__form-field">
-                                        <input type="text" name="name" class="contacts__form-input" placeholder="Фио*">
+                                        <input type="text" name="name" class="contacts__form-input" placeholder="Имя*">
                                         <span class="contacts__form-icon user-icon"></span>
                                     </div>
                                 </div>
@@ -486,7 +486,7 @@
                 <div class="contacts__form-row">
                     <div class="contacts__form-col">
                         <div class="contacts__form-field">
-                            <input type="text" name="name" class="contacts__form-input" placeholder="Фио*">
+                            <input type="text" name="name" class="contacts__form-input" placeholder="Имя*">
                             <span class="contacts__form-icon user-icon"></span>
                         </div>
                     </div>
