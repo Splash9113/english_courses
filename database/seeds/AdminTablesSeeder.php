@@ -19,7 +19,7 @@ class AdminTablesSeeder extends Seeder
         Administrator::truncate();
         Administrator::create([
             'username' => 'admin',
-            'password' => bcrypt('admin'),
+            'password' => bcrypt('myenglishschool'),
             'name'     => 'Administrator',
         ]);
 

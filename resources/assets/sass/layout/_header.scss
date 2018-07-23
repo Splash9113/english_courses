@@ -1,0 +1,169 @@
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 43px 0;
+	transition: padding .3s, background-color .3s, box-shadow .3s;
+	transform: translate3d(0, 0, 0);
+}
+
+.header__inner {
+	@include wrapper;
+}
+
+.header__content {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo__link {
+	display: block;
+	width: 55px;
+	height: 86px;
+
+	img {
+		object-fit: cover;
+		object-position: 50% 50%;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.language {
+	position: relative;
+}
+
+.language__toggle {
+	position: relative;
+	z-index: 2;
+	display: block;
+	height: 42px;
+	padding: 0 48px 0 27px;
+	color: #fff;
+	line-height: 42px;
+	background-color: $green;
+	border-radius: 21px 21px;
+	transition: color .3s ease-in-out;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 28px;
+		width: 8px;
+		height: 8px;
+		background: url('/img/icon-sprite.png') no-repeat;
+		background-position: -270px -168px;
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		color: darken($green, 30%);
+	}
+}
+
+.language__list {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+	padding: 18px 0 3px;
+	background-color: $green;
+	border-radius: 0 0 21px 21px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 18px;
+		left: 50%;
+		width: 80%;
+		height: 1px;
+		margin-left: -40%;
+		background-color: rgba($color: #fff, $alpha: .53);
+	}
+}
+
+.language__link {
+	display: block;
+	padding: 6px 27px;
+	color: #fff;
+	text-decoration: underline;
+	transition: color .3s ease-in-out;
+
+	&:hover {
+		color: darken($green, 30%);
+	}
+}
+
+.header--sticky {
+	padding: 30px 0;
+  background-color: rgba($color: #fff, $alpha: .85);
+  box-shadow: 0 1px 13px rgba($color: $dark-gray, $alpha: .15);
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding: 12px 0;
+		background-color: rgba(255, 255, 255, .85);
+    box-shadow: 0 1px 13px rgba($color: $dark-gray, $alpha: .15);
+	}
+
+	.header--sticky {
+		padding: 12px 0;
+
+		.logo {
+			position: absolute;
+			left: 15px;
+		}
+	}
+
+	.header__content {
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.logo {
+		position: absolute;
+		left: 15px; 
+		transform: translate(0 -50%);
+	}
+
+	.logo__link {
+		width: 30px;
+		height: 48px;
+	}
+
+	.language {
+		order: 2;
+		margin-right: 20px;
+	}
+
+	.language__toggle {
+    height: 35px;
+    padding: 0 30px 0 13px;
+		font-size: 14px;
+		line-height: 35px;
+
+		&::before {
+			right: 13px;
+		}
+	}
+
+	.language__link {
+		padding: 10px 13px;
+		font-size: 14px;
+	}
+}

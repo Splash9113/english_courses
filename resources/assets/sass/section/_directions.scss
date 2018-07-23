@@ -1,0 +1,393 @@
+.directions {
+  padding: 84px 0 76px;
+}
+
+.directions__inner {
+	@include wrapper;
+}
+
+.directions__row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.directions__col {
+  flex: 0 0 33.33333%;
+	max-width: 33.33333%;
+	margin-bottom: 30px;
+	
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+.directions__container {
+	position: relative;
+	padding: 15px 15px 15px;
+	transition: background-color .4s, border-radius .2s;
+
+	&:hover {
+		background-color: $green;
+		border-radius: 10px;
+	}
+}
+
+.directions__icon-block {
+	display: flex;
+	align-items: center;
+	width: 58px;
+	height: 59px;
+	margin-bottom: 26px;
+	overflow: hidden;
+}
+
+.directions__icon {
+	position: relative;
+	display: block;
+	background: url('/img/icon-sprite.png') no-repeat;
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url('/img/icon-sprite.png') no-repeat;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+}
+
+.individual__icon	{
+	width: 37px;
+	height: 43px;
+	background-position: -10px -10px;
+
+	&::before {
+		background-position: -10px -89px;
+	}
+}
+
+.general__icon {
+	width: 52px;
+	height: 43px;
+	background-position: -67px -10px;
+
+	&::before {
+		background-position: -67px -89px;
+	}
+}
+
+.conversational__icon {
+	width: 58px;
+	height: 59px;
+	background-position: -139px -10px;
+
+	&::before {
+		background-position: -139px -89px;
+	}
+}
+
+.corporate__icon {
+	width: 54px;
+	height: 54px;
+	background-position: -217px -10px;
+
+	&::before {
+		background-position: -217px -89px;
+	}
+}
+
+.special__icon {
+	width: 52px;
+	height: 53px;
+	background-position: -291px -10px;
+
+	&::before {
+		background-position: -291px -89px;
+	}
+}
+
+.skype__icon {
+	width: 47px;
+	height: 47px;
+	background-position: -363px -10px;
+
+	&::before {
+		background-position: -363px -89px;
+	}
+}
+
+.directions__title {
+	display: block;
+	margin-bottom: 12px;
+	font-family: $comfortaa-regular;
+	font-size: 18px;
+	line-height: 32px;
+	color: $dark-gray;
+	transition: color .3s;
+}
+
+.directions__link {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 18px;
+	color: $gray;
+	text-decoration: underline;
+	transition: color .3s;
+}
+
+.directions__container:hover {
+	.individual__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.general__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.conversational__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.corporate__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.special__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.skype__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.directions__title {
+		color: #fff;
+	}
+
+	.directions__link {
+		font-family: $lato-bold;
+		color: darken($green, 30%);
+	}
+}
+
+.directions-desc {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1002;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba($color: #000, $alpha: .54);
+	opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.directions-desc__container {
+	width: 466px;
+	padding: 30px 30px;
+	background-color: $green;
+	border-radius: 10px;
+	transform: scale(0);
+	transition: transform .5s ease-in-out;
+}
+
+.directions-desc__head {
+	margin-bottom: 40px;
+}
+
+.directions-desc__body {
+	overflow-y: auto;
+	max-height: 400px;
+	-webkit-overflow-scrolling:touch;
+}
+
+.directions-desc__icon-block {
+	display: flex;
+	align-items: center;
+	width: 58px;
+	height: 59px;
+	margin: 0 auto;
+	margin-bottom: 26px;
+	overflow: hidden;
+}
+
+.directions-desc__title {
+	display: block;
+	font-family: $comfortaa-bold;
+	font-size: 23px;
+	color: #fff;
+	text-align: center;
+}
+
+.directions-desc__text {
+	font-size: 20px;
+	line-height: 28px;
+	text-indent: 25px;
+	text-align: left;
+	color: darken($green, 30%);
+}
+
+.directions-desc__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	text-indent: -9999px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	
+
+	&::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -8px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    transition: background-color .3s ease-in-out;
+	}
+
+	&::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -8px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    transition: background-color .3s ease-in-out;
+	}
+
+	&:hover::before {
+			background-color: darken($green, 30%);
+		}
+
+	&:hover::after {
+		background-color: darken($green, 30%);
+	}
+}
+
+.directions-desc--show {
+	.directions-desc {
+		opacity: 1;
+	  visibility: visible;
+	  transition: opacity 0.3s 0s, visibility 0s 0s;
+	}
+
+	.directions-desc__container {
+		transform: scale(1);
+	}
+
+	.directions__container {
+		background-color: $green;
+		border-radius: 10px;
+	}
+
+	.directions__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.directions__title {
+		color: #fff;
+	}
+
+	.directions__link {
+		font-family: $lato-bold;
+		color: darken($green, 30%);
+	}
+}
+
+@media (max-width: 1023px) {
+	.directions__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+	}
+}
+
+@media (max-width: 768px) {
+	.directions {
+		padding: 40px 0;
+	}
+}
+
+@media (max-width: 599px) {
+	.directions__row {
+		display: block;
+	}
+
+	.directions__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+	}
+
+	.directions__container {
+		text-align: center;
+	}
+
+	.directions__icon-block {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.directions-desc__container {
+		width: 90%;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.directions-desc__head {
+		margin-bottom: 20px;
+	}
+
+	.directions-desc__icon-block {
+		margin-bottom: 15px;
+	}
+
+	.directions-desc__title {
+		font-size: 18px;
+	}
+
+	.directions-desc__body {
+		max-height: 250px;
+	}
+
+	.directions-desc__text {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}

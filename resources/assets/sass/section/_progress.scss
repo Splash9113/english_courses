@@ -1,0 +1,202 @@
+.progress {
+	padding: 123px 0;
+	background-color: $bluish-white;
+}
+
+.progress__inner {
+	@include wrapper;
+}
+
+.progress__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.progress__col {
+	flex: 0 0 25%;
+	max-width: 25%;
+	padding: 0 15px;
+}
+
+.progress__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 14px 0;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.progress__container:hover {
+	.students__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.clock__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.books__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.smiles__icon {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	.progress__title {
+		color: $green;
+	}
+}
+
+.progress__icon-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 48px;
+	height: 49px;
+	margin-right: 17px;
+	overflow: hidden;
+}
+
+.progress__icon {
+	position: relative;
+	display: block;
+	background: url('/img/icon-sprite.png') no-repeat;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url('/img/icon-sprite.png') no-repeat;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+}
+
+.students__icon {
+	width: 45px;
+	height: 49px;
+	background-position: -10px -168px;
+
+	&::before {
+		background-position: -10px -237px;
+	}
+}
+
+.clock__icon {
+	width: 47px;
+	height: 47px;
+	background-position: -75px -168px;
+
+	&::before {
+		background-position: -75px -237px;
+	}
+}
+
+.books__icon {
+	width: 48px;
+	height: 48px;
+	background-position: -142px -168px;
+
+	&::before {
+		background-position: -142px -237px;
+	}
+}
+
+.smiles__icon {
+	width: 40px;
+	height: 40px;
+	background-position: -210px -168px;
+
+	&::before {
+		background-position: -210px -237px;
+	}
+}
+
+
+.progress__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.progress__title {
+	display: block;
+	font-family: $comfortaa-bold;
+	font-size: 70px;
+	line-height: 70px;
+	color: $dark-gray;
+	text-align: center;
+
+	transition: color .3s;
+
+	&--small {
+		font-size: 36px;
+		line-height: 36px;
+	}
+}
+
+.progress__subtitle {
+	display: block;
+	font-family: $comfortaa-bold;
+	font-size: 16px;
+	color: $dark-gray;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@media (max-width: 1199px) {
+	.progress__col {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.progress {
+		padding: 40px 0;
+	}
+
+	.progress__title {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.progress__title--small {
+		font-size: 36px;
+		line-height: 50px;
+	}
+}
+
+@media (max-width: 599px) {
+	.progress__row {
+		display: block;
+	}
+	
+	.progress__col {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}

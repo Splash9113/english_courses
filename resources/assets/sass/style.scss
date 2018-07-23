@@ -1,0 +1,28 @@
+/*Global style*/
+@import "global/_normalize.scss";
+@import "global/_mixins.scss";
+@import "global/_fonts.scss";
+@import "global/_variables.scss";
+@import "global/_global.scss";
+
+/*Element style*/
+@import "element/_nav.scss";
+@import "element/_btn.scss";
+@import "element/_popup.scss";
+
+/*Lib style*/
+@import "lib/_slick.scss";
+@import "lib/_aos.scss";
+
+/*Layout style*/
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+
+/*Section style*/
+@import "section/_banner.scss";
+@import "section/_directions.scss";
+@import "section/_timetable.scss";
+@import "section/_prices.scss";
+@import "section/_progress.scss";
+@import "section/_reviews.scss";
+@import "section/_contacts.scss";

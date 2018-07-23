@@ -1,0 +1,41 @@
+@mixin wrapper {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: $small-tablet-portrait) {
+    max-width: 580px;
+  }
+
+  @media (min-width: $tablet-portrait) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $tablet-landscape) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1200px;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
+  }
+
+  &:-moz-placeholder {
+      @content;
+  }
+
+  &::-moz-placeholder { 
+      @content;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+}
