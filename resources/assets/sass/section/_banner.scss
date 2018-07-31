@@ -72,7 +72,6 @@
 
 @media (max-width: 1199px) {
 	.banner {
-		height: auto;
 		padding-bottom: 80px;
 	}
 }
@@ -133,5 +132,11 @@
 	  	left: 8px;
 	  	border-width: 2px;
 	  }
+	}
+}
+
+@media (max-width: 370px) {
+	.banner {
+    padding-top: 100px;
 	}
 }

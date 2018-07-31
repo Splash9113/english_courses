@@ -56,7 +56,7 @@
             <div class="banner__content">
                 <h1 class="banner__title" data-aos="zoom-in">Учи английский с Юлей!</h1>
                 <p class="banner__text" data-aos="slide-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis sapien quis sollicitudin finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce vehicula est ut orci euismod</p>
-                <a href="#" class="btn btn-border--gray btn--lg popup__toggle banner__link want-button" data-aos="zoom-in" data-aos-delay="500">Хочу учить язык</a>
+                <a href="#" class="btn btn-border--gray btn--lg popup__toggle banner__link" data-aos="zoom-in" data-aos-delay="500">Хочу учить язык</a>
             </div>
         </div>
     </div>
@@ -211,19 +211,10 @@
             <div class="timetable__row">
                 <div class="timetable__left" data-aos="slide-right">
                     <h2 class="timetable__title">Выбери для себя удобное время</h2>
-                    <div class="timetable__switcher">
-                        <div class="timetable__switcher-container">
-                            <input type="radio" id="weekdays" class="timetable__switcher-input" name="time" value="weekdays" checked>
-                            <label for="weekdays" class="timetable__switcher-label">Будние дни</label>
-                            <input type="radio" id="weekend" class="timetable__switcher-input" name="time" value="weekend">
-                            <label for="weekend" class="timetable__switcher-label">Выходные</label>
-                            <span class="timetable__switch"></span>
-                        </div>
-                    </div>
                     <p class="timetable__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis sapien quis sollicitudin finibus.</p>
                 </div>
                 <div class="timetable__right" data-aos="slide-left">
-                    <div class="timetable__table timetable__table--current">
+                    <div class="timetable__table">
                         <h3 class="timetable__table-title">Будние дни</h3>
                         <span class="timetable__table-caption">Пн - Пт</span>
                         <p class="timetable__table-text">Lorem ipsum dolor sit amet, consectetur</p>
@@ -254,11 +245,12 @@
     <div id="prices" class="prices">
         <div class="prices__inner">
             <div class="prices__row">
-                <div class="pricces__content" data-aos="slide-left">
+                <div class="prices__content" data-aos="slide-left">
                     <h2 class="prices__title">Тут будет заголовок к разделу "Цены"</h2>
                     <p class="prices__text">Morbi non odio sodales ligula viverra eleifend. Morbi ullamcorper volutpat sem, in ornare nibh luctus non. Aliquam erat volutpat. Nullam venenatis augue ac cursus mollis. Pellentesque efficitur pharetra arcu ac efficitur. Ut a euismod est. Donec dolor velit, pharetra et fermentum at, consectetur vel metus.</p>
-                    <span class="pricces__caption">Связаться со мной</span>
-                    <a href="#" class="btn btn-border--gray btn--sm popup__toggle prices__link">Записаться</a>
+                    <a href="#" class="btn btn--green btn--lg popup__toggle prices__link">Связаться со мной
+                        <span class="prices__link-icon"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -321,7 +313,7 @@
             <div class="reviews__slider">
                 <div class="reviews__slider-item">
                     <div class="reviews__slider-photo">
-                        <img src="http://ehoop.ru/uploads/posts/2016-02/1454720647_bart.jpg" alt="user photo">
+                        <img src="https://vignette.wikia.nocookie.net/mighty355/images/a/ac/Bart-simpson-01.gif/revision/latest?cb=20150622201754" alt="user photo">
                     </div>
                     <strong class="reviews__slider-name">Mark Holden</strong>
                     <span class="reviews__slider-caption">Дизайнер</span>
@@ -348,7 +340,7 @@
                 </div>
                 <div class="reviews__slider-item">
                     <div class="reviews__slider-photo">
-                        <img src="http://ehoop.ru/uploads/posts/2016-02/1454720647_bart.jpg" alt="user photo">
+                        <img src="https://vignette.wikia.nocookie.net/mighty355/images/a/ac/Bart-simpson-01.gif/revision/latest?cb=20150622201754" alt="user photo">
                     </div>
                     <strong class="reviews__slider-name">Mark Holden</strong>
                     <span class="reviews__slider-caption">Дизайнер</span>

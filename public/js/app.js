@@ -34612,13 +34612,6 @@ $(document).ready(function () {
 		});
 	});
 
-	$(".logo__link, .footer__logo-link").click(function (e) {
-		e.preventDefault();
-		$("body,html").animate({
-			scrollTop: 0 }, 800);
-		return false;
-	});
-
 	$('.footer__nav a[href^="#"]').click(function () {
 		var hash = $(this).attr('href');
 		$('html, body').animate({
@@ -34701,24 +34694,20 @@ $(document).ready(function () {
 	    $directionsDesc = $('.directions-desc'),
 	    $directionsDescContainer = $('.directions-desc__container');
 
-	$directions.on('click', '.directions__link', function (evt) {
-		evt.preventDefault();
+	$directions.on('click', '.directions__link', function (e) {
+		e.preventDefault();
 		var block = $(this).parents('.directions__col');
 		block.addClass('directions-desc--show');
 		block.siblings().removeClass('directions-desc--show');
-
-		var $firstNavClick = true;
-		$(document).bind('click.myNavEvent', function (e) {
-			if (!$firstNavClick && $(e.target).closest($directionsDescContainer).length == 0) {
-				$('.directions__col').siblings().removeClass('directions-desc--show');
-				$(document).unbind('click.myNavEvent');
-			}
-			$firstNavClick = false;
-		});
 	});
 
-	$directions.on('click', '.directions-desc__close', function (evt) {
-		evt.preventDefault();
+	$(document).mouseup(function (e) {
+		if (!$directionsDescContainer.is(e.target) && $directionsDescContainer.has(e.target).length === 0) {
+			$('.directions__col').siblings().removeClass('directions-desc--show');
+		}
+	});
+
+	$directions.on('click', '.directions-desc__close', function () {
 		var block = $(this).parents('.directions__col');
 		block.removeClass('directions-desc--show');
 	});
@@ -34730,20 +34719,17 @@ $(document).ready(function () {
 	    $popupClose = $('.popup__close'),
 	    $popupContainer = $('.popup__container');
 
-	$popupToggle.click(function (e) {
-		e.preventDefault();
+	$popupToggle.click(function (evt) {
+		evt.preventDefault();
 		if (!$popup.hasClass('popup--show')) {
 			$popup.addClass('popup--show');
 		}
+	});
 
-		var $firstNavClick = true;
-		$(document).bind('click.myNavEvent', function (e) {
-			if (!$firstNavClick && $(e.target).closest($popupContainer).length == 0) {
-				$popup.removeClass('popup--show');
-				$(document).unbind('click.myNavEvent');
-			}
-			$firstNavClick = false;
-		});
+	$(document).mouseup(function (e) {
+		if (!$popupContainer.is(e.target) && $popupContainer.has(e.target).length === 0) {
+			$popup.removeClass('popup--show');
+		}
 	});
 
 	$popupClose.click(function () {
