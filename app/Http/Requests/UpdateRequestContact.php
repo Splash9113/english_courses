@@ -24,6 +24,8 @@ class UpdateRequestContact extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
             'comment' => ''
         ];
     }
