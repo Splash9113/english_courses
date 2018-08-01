@@ -122,6 +122,13 @@ class AdminTablesSeeder extends Seeder
                 'icon'      => 'fa-calendar',
                 'uri'       => 'schedules',
             ],
+            [
+                'parent_id' => 0,
+                'order'     => 8,
+                'title'     => 'Request Contact',
+                'icon'      => 'fa-envelope',
+                'uri'       => 'request-contact',
+            ],
         ]);
 
         // add role to menu.

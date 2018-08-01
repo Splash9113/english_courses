@@ -4,17 +4,22 @@ namespace App\Providers;
 
 use App\Factories\GroupFactory;
 use App\Factories\NewsFactory;
+use App\Factories\RequestContactFactory;
 use App\Factories\ScheduleFactory;
 use App\Repositories\GroupRepository;
 use App\Repositories\GroupRepositoryInterface;
 use App\Repositories\NewsRepository;
 use App\Repositories\NewsRepositoryInterface;
+use App\Repositories\RequestContactRepository;
+use App\Repositories\RequestContactRepositoryInterface;
 use App\Repositories\ScheduleRepository;
 use App\Repositories\ScheduleRepositoryInterface;
 use App\Services\GroupService;
 use App\Services\GroupServiceInterface;
 use App\Services\NewsService;
 use App\Services\NewsServiceInterface;
+use App\Services\RequestContactService;
+use App\Services\RequestContactServiceInterface;
 use App\Services\ScheduleService;
 use App\Services\ScheduleServiceInterface;
 use Illuminate\Contracts\Container\Container;
@@ -75,6 +80,19 @@ class AppServiceProvider extends ServiceProvider
             return new ScheduleRepository(
                 $app->make(GroupServiceInterface::class),
                 $app->make(ScheduleFactory::class)
+            );
+        });
+
+        $this->app->bind(RequestContactServiceInterface::class, function(Container $app) {
+            return new RequestContactService(
+                $app->make(RequestContactRepositoryInterface::class),
+                $app->make(RequestContactFactory::class)
+            );
+        });
+
+        $this->app->bind(RequestContactRepositoryInterface::class, function(Container $app) {
+            return new RequestContactRepository(
+                $app->make(RequestContactFactory::class)
             );
         });
     }

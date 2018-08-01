@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'MainController@index');
+
+Route::post('request-contact', 'MainController@requestContact');

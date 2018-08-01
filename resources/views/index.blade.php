@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Курсы английского">
     <meta name="keywords" content="Курсы английского, английский язык">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Курсы английского</title>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon.ico">
@@ -367,6 +368,7 @@
                 </div>
                 <div class="contacts__right" data-aos="slide-left">
                     <form action="#" class="contacts__form">
+                        {{csrf_field()}}
                         <fieldset>
                             <div class="contacts__form-row">
                                 <div class="contacts__form-col">
@@ -383,7 +385,7 @@
                                 </div>
                                 <div class="contacts__form-col">
                                     <div class="contacts__form-field">
-                                        <input type="tel" name="tel" class="contacts__form-input" placeholder="Телефон">
+                                        <input type="tel" name="phone" class="contacts__form-input" placeholder="Телефон">
                                         <span class="contacts__form-icon tel-icon"></span>
                                     </div>
                                 </div>
@@ -474,6 +476,7 @@
         <span class="popup__title">Запишись на курсы</span>
         <span class="popup__subtitle">Пожалуйста, заполните поля <br>ввода ниже:</span>
         <form action="#" class="contacts__form">
+            {{csrf_field()}}
             <fieldset>
                 <div class="contacts__form-row">
                     <div class="contacts__form-col">
@@ -490,7 +493,7 @@
                     </div>
                     <div class="contacts__form-col">
                         <div class="contacts__form-field">
-                            <input type="tel" name="tel" class="contacts__form-input" placeholder="Телефон">
+                            <input type="tel" name="phone" class="contacts__form-input" placeholder="Телефон">
                             <span class="contacts__form-icon tel-icon"></span>
                         </div>
                     </div>

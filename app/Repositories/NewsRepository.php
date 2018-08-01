@@ -40,7 +40,7 @@ class NewsRepository extends AbstractEloquentRepository implements NewsRepositor
         $news = new News($data['title'], $data['body']);
         $news->setId($data['id']);
 
-        return $group;
+        return $news;
     }
 
     public function create(News $news)

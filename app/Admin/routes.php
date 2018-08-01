@@ -15,6 +15,7 @@ Route::group([
     $router->resource('news', 'NewsController');
     $router->resource('groups', 'GroupController');
     $router->resource('schedules', 'ScheduleController');
+    $router->resource('request-contact', 'RequestContactController');
 
     Route::group([
         'namespace' => 'Auth'
