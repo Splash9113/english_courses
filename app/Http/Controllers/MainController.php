@@ -51,8 +51,8 @@ class MainController extends Controller
     {
         return view('index',
             [
-                'news' => $this->newsService->all(),
-                'groups' => $this->groupService->all(),
+//                'news' => $this->newsService->all(),
+//                'groups' => $this->groupService->all(),
                 'schedules' => $this->scheduleService->all()
             ]
         );
