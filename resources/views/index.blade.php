@@ -596,11 +596,11 @@
                     <ul class="footer__social-list">
                         <li class="footer__social-item">
                             <span class="footer__social-icon fb-icon"></span>
-                            <a href="#" class="footer__social-link">Facebook</a>
+                            <a href="{{env('FB_LINK')}}" class="footer__social-link">Facebook</a>
                         </li>
                         <li class="footer__social-item">
                             <span class="footer__social-icon inst-icon"></span>
-                            <a href="#" class="footer__social-link">Instagram</a>
+                            <a href="{{env('INST_LINK')}}" class="footer__social-link">Instagram</a>
                         </li>
                     </ul>
                 </div>
