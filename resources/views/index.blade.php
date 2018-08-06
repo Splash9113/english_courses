@@ -374,7 +374,7 @@
                 </div>
                 <div class="reviews__slider-item">
                     <div class="reviews__slider-photo">
-                        <img src="/img/avatar_yulia.jpg"
+                        <img src="/img/avatar_julia.jpg"
                              alt="user photo">
                     </div>
                     <strong class="reviews__slider-name">Юлия</strong>
