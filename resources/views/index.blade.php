@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Курсы английского">
+    <title>Курсы английского в Харькове</title>
+    <meta name="description" content="Английский с Юлей">
     <meta name="keywords" content="Курсы английского, английский язык">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Курсы английского</title>
